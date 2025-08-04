@@ -1,13 +1,14 @@
-package org.todolist.DataService;
+package org.todolist.AppService;
 
 import org.todolist.DataModel.TodoItem;
+import org.todolist.DataService.TaskListManager;
 import org.todolist.Enums.TaskStatus;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class InputHandler {
+public class InputService {
     private static TaskStatus getMarkStatus(String status) {
         try {
             return switch (status) {
