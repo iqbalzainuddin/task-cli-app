@@ -1,15 +1,16 @@
 package org.todolist;
 
-import org.todolist.DataService.InputHandler;
+import org.todolist.AppService.OutputService;
+import org.todolist.AppService.InputService;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            System.out.println("==============");
-            System.out.println("To-do List App");
-            System.out.println("==============\n");
-
-            InputHandler.performAction(args);
+            if (args.length == 0) {
+                OutputService.printCommandInstruction();
+            } else {
+                InputService.performAction(args);
+            }
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
